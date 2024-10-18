@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess Slide - Sports Club</title>
+    <link rel="stylesheet" href="chess.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Navbar wrapped inside a white box -->
+        <div class="navbar-box">
+            <div class="navbar">
+                <img src="logo1.png" class="logo" alt="GameZone Logo">
+                <nav>
+                    <ul id="menuList">
+                        <li><a href="HomePage.php">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="Event.php">Event</a></li>
+                        <li><a href="sports.html">Sport</a></li>
+                        <li><a href="New Register Form.html">Membership</a></li>
+                        <li><a href="ruls.html">Rules</a></li>
+                        <li><a href="contactUs.html">Contact</a></li>
+                        <li><a href="login.html" class="login">Login</a></li>
+                    </ul>
+                </nav>
+                <i class="fa-solid fa-bars menu-icon" onclick="togglemenu()"></i>
+            </div>
+        </div>
+        
+        <script>
+            var menuList = document.getElementById("menuList");
+            menuList.style.maxHeight = "0px";
+
+            function togglemenu(){
+                if(menuList.style.maxHeight == "0px"){
+                     menuList.style.maxHeight = "240px";
+                }
+                else{
+                     menuList.style.maxHeight = "0px";
+                }
+            }
+        </script>
+        
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <img src="2-1.jpeg" alt="Chess Image" class="hero-image">
+            <div class="overlay-box">
+                <div class="overlay-text">
+                    <h1>CHESS</h1>
+                    <br>
+                    <p>Welcome to the Chess section of our sports club. Here you'll find information about the team members, coaches, and schedule.</p>
+                </div>
+            </div>
+        </section>
+        
+        <div class="content">
+            <!-- Timetable Section -->
+            <section class="timetable">
+                <h2>Chess Timetable</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Time</th>
+                            <th>Activity</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Monday</td>
+                            <td>6:00 PM - 8:00 PM</td>
+                            <td>Training</td>
+                        </tr>
+                        <tr>
+                            <td>Wednesday</td>
+                            <td>6:00 PM - 8:00 PM</td>
+                            <td>Training</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- New Section: Sport Description and Image -->
+            <section class="sport-description">
+                <div class="row">
+                    <div class="column">
+                        <h2>About of our Chess</h2>
+                        <br>
+                        <p>
+                            Chess is a strategic and intellectually stimulating game that sharpens your mind and enhances critical thinking skills. At our club, we offer comprehensive training programs to help you understand the game's intricacies and develop effective strategies
+                        </p>
+                        <p>
+                            Whether you're a beginner or an experienced player, our club provides the resources and expert coaching to improve your skills and deepen your appreciation for chess.
+                        </p>
+                        <a href="#">Register</a>
+                    </div>
+                    <div class="column">
+                        <img src="3-1.jpeg" alt="Chess Training" class="description-image">
+                    </div>
+                </div>
+            </section>
+            
+            <div class="sport-description">
+                <div class="row">
+                    <div class="column">
+                        <img src="4-1.jpg" alt="chess Image" class="description-image">
+                    </div>
+                    <div class="column">
+                        <h2>About our Practices</h2>
+                        <br>
+                        <p>Join us to not only play chess but also to learn tactics, develop your problem-solving abilities, and cultivate discipline, all in a supportive and professional environment. We help individuals grow in both skills and confidence, fostering a lifelong passion for the game.</p>
+                        <p>Our club features comfortable and conducive spaces for practice, and we organize regular tournaments to test your skills and enhance your competitive spirit. Join us to learn, practice, and excel in chess</p>
+                        <a href="#">Register</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Member Table -->
+            <section class="members">
+                <h2>Team Members</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Player Name</th>
+                            <th>Age range</th>
+                            <th>Age</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Allex Smith</td>
+                            <td>under 18</td>
+                            <td>18</td>
+                        </tr>
+                        <tr>
+                            <td>Lio Smith</td>
+                            <td>under 15</td>
+                            <td>10</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Coaches Section -->
+            <section class="coaches">
+                <h2>Coaches</h2>
+                <ul>
+                    <li>Head Coach: Codex Lio</li>
+                    <li>Assistant Coach: Suba</li>
+                </ul>
+            </section>
+        </div>
+
+        <div class="footer">
+            <div class="col-1">
+                <h3>QUICK LINKS</h3>
+                <a href="#">About Us</a>
+                <a href="#">Event</a>
+                <a href="#">Sport</a>
+                <a href="#">Contact</a>
+                <a href="#">Login</a>
+            </div>
+            <div class="col-2">
+                <h3>NEWSLETTER</h3>
+                <form>
+                    <input type="email" placeholder="Your Email Address" required>
+                    <br>
+                    <button type="submit">SUBSCRIBE NOW</button>
+                </form>
+            </div>
+            <div class="col-3">
+                <h3>CONTACT US</h3>
+                <p>24/A, Udhaya Road, Lane 1<br>New Shade, Colombo 03</p>
+                <div class="social-icons">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-linkedin"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

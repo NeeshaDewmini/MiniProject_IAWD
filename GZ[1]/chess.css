@@ -1,0 +1,357 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    padding-left: 8%;
+    padding-right: 8%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.navbar-box {
+    background-color: rgba(255, 255, 255, 0.9); /* White box with slight transparency */
+    padding: 10px 0;
+    margin-bottom: 20px;
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.logo {
+    width: 150px;
+    cursor: pointer;
+    display: flex;
+}
+
+.menu-icon {
+    width: 25px;
+    cursor: pointer;
+    display: none !important;
+}
+
+nav {
+    flex: 1;
+    text-align: right;
+}
+
+nav ul {
+    padding: 0;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+    padding: 10px;
+}
+
+nav ul li a:hover {
+    color: #ff5ea2;
+}
+
+.login {
+    padding: 10px 20px;
+    background-color: #ff54a2;
+    color: #fff;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.login:hover {
+    background-color: #ff575a;
+    color: #000;
+}
+
+/* Footer */
+.footer {
+    margin-top: 50px;
+    width: 100%;
+    padding: 50px 15%;
+    background: linear-gradient(#ff54a2, #ff575a);
+    color: #efefef;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    justify-content: space-between;
+}
+
+.footer div {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.col-2 {
+    flex-grow: 2;
+}
+
+.footer div h3 {
+    font-weight: 300;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.col-1 a {
+    display: block;
+    text-decoration: none;
+    color: #efefef;
+    margin-bottom: 10px;
+}
+
+.col-1, .col-3 {
+    margin: 0 auto;
+}
+
+form input {
+    width: 400px;
+    height: 45px;
+    border-radius: 4px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    outline: none;
+    border: none;   
+}
+
+form button {
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    border-radius: 30px;
+    padding: 10px 30px;
+    transition: all ease-in-out 0.2s;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+/* Background image and content style */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+/* Overlay for background image with 50% opacity */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Adjusted opacity for background image */
+    z-index: -1;
+}
+/* Hero Section */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 350px;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content {
+    background-color: rgba(255, 255, 255, 0.8); /* 50% opacity for the content background */
+    padding: 20px;
+    color: #333;
+}
+.overlay-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.65); /* 50% opacity box */
+    
+}
+
+.overlay-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.overlay-text {
+    text-align: center;
+}
+
+.overlay-text h1 {
+    font-size: 48px;
+    color: #ffffff;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.overlay-text p {
+    font-size: 20px;
+    color: #efefef;
+    line-height: 1.5;
+    margin-top: 10px;
+}
+
+/* Timetable Section */
+.timetable {
+    margin: 20px 0;
+}
+
+.timetable table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 40px;
+}
+.timetable h2 {
+    color: #000;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.timetable th, .timetable td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.timetable th {
+    background-color: #444;
+    color: #fff;
+}
+
+/* Description and Image Section */
+.sport-description {
+    display: flex;
+    margin: 40px 0;
+}
+
+.sport-description .row {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+
+.sport-description .column {
+    flex: 1;
+    padding: 20px;
+    text-align: justify;
+}
+.sport-description .column h2{
+    color: #ff54a2;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+}
+
+.sport-description .description-image {
+    width: 100%;
+    border-radius: 10px;
+}
+
+
+.sport-description {
+    display: flex;
+    margin: 40px 0;
+}
+
+.sport-description .row {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    flex-direction: row-reverse; /* This reverses the order of columns */
+}
+
+.sport-description .column {
+    flex: 1;
+    padding: 20px;
+    text-align: justify;
+}
+
+.sport-description .description-image {
+    width: 100%;
+    border-radius: 10px;
+}
+
+
+/* Members and Coaches */
+.members, .coaches {
+    margin: 20px 0;
+}
+.members, .coaches h2 {
+    color: #000;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    color: #333;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #444;
+    color: white;
+}
+
+.coaches ul {
+    list-style: none;
+    padding: 0;
+}
+
+.coaches li {
+    background-color: rgba(255, 255, 255, 0.8);
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.timetable th {
+    background-color: #444;
+    color: white;
+}
+
+/* Media Query for responsiveness */
+@media (max-width: 768px) {
+    table {
+        font-size: 14px;
+    }
+}

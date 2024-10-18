@@ -1,0 +1,310 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+/* Container */
+.container {
+    width: 100%;
+    min-height: 100vh; /* Ensures full height */
+    padding-left: 8%;
+    padding-right: 8%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* Navbar */
+.navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 20px 0; /* Add padding to navbar for spacing */
+}
+
+.logo {
+    width: 100px;
+    cursor: pointer;
+}
+
+.menu-icon {
+    width: 25px;
+    cursor: pointer;
+    display: none !important; 
+}
+
+nav {
+    flex: 1;
+    text-align: right;
+}
+
+nav ul {
+    padding: 0; /* Remove padding */
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+    padding: 10px;
+}
+
+nav ul li a:hover {
+    color: #ff5ea2;
+}
+
+.login {
+    padding: 10px 20px;
+    background-color: #ff54a2;
+    color: #fff;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.login:hover {
+    background-color: #ff575a;
+    color: #000;
+}
+
+/* Footer */
+.footer {
+    margin-top: 50px; /* Reduced margin to minimize space */
+    width: 100%;
+    padding: 50px 15%;
+    background: linear-gradient(#ff54a2, #ff575a);
+    color: #efefef;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    justify-content: space-between;
+}
+
+.footer div {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.col-2 {
+    flex-grow: 2;
+}
+
+.footer div h3 {
+    font-weight: 300;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.col-1 a {
+    display: block;
+    text-decoration: none;
+    color: #efefef;
+    margin-bottom: 10px;
+}
+
+.col-1, .col-3 {
+    margin: 0 auto;
+}
+
+form input {
+    width: 400px;
+    height: 45px;
+    border-radius: 4px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    outline: none;
+    border: none;   
+}
+
+form button {
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    border-radius: 30px;
+    padding: 10px 30px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.social-icons {
+    margin-top: 30px;
+}
+
+.social-icons i {
+    font-size: 22px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+p {
+    color: #efefef;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 700px) {
+    nav ul {
+        width: 100%;
+        background: linear-gradient(#ff54a2, #ff575a);
+        position: absolute;
+        top: 100px;
+        right: 0;
+        z-index: 2;
+    }
+
+    nav ul li {
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    nav ul li a {
+        color: #fff;
+    }
+
+    .menu-icon {
+        display: block !important; 
+    }
+
+    #menuList {
+        overflow: hidden;
+        transition: 0.5s;
+    }
+
+    .login {
+        display: block;
+        text-align: center;
+        margin-top: 10px;
+        background-color: #fff;
+        color: #ff54a2;
+    }
+
+    .login:hover {
+        background-color: #ff54a2;
+        color: #fff;
+    }
+}
+marquee a {
+    color: #ff54a2;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+marquee a:hover {
+    text-decoration: underline;
+    color: #ff575a;
+}
+
+.event-schedule {
+    background-color: #f0f0f0;
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+.event-schedule h2 {
+    color: #ff54a2;
+    font-family: 'Lucida Sans', sans-serif;
+    margin-bottom: 20px;
+}
+
+.event-schedule p {
+    color: #000;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+
+.sport-description {
+    display: flex;
+    margin: 40px 0;
+}
+.sport-description h2 {
+    color: #ff54a2;
+    font-family: 'Lucida Sans', sans-serif;
+    margin-bottom: 20px;
+    
+}
+.sport-description .row {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+
+.sport-description .column {
+    flex: 1;
+    padding: 20px;
+    text-align: justify;
+}
+
+.sport-description .column p {
+    color: #000; 
+}
+.sport-description .column h2{
+    color: #ff54a2;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+}
+
+.sport-description .description-image {
+    width: 80%; /* Reduce the size to 80% of the column width */
+    border-radius: 10px;
+}
+
+
+.sport-description {
+    display: flex;
+    margin: 40px 0;
+}
+
+.booking-form {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+.booking-form h2 {
+    color: #ff54a2;
+    font-family: 'Lucida Sans', sans-serif;
+    margin-bottom: 20px;
+}
+
+.booking-form label {
+    display: block;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #000;
+}
+
+.booking-form input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.booking-form button {
+    background-color: #ff54a2;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.booking-form button:hover {
+    background-color: #ff575a;
+}

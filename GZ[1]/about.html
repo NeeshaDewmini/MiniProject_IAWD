@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home Page of GameZone</title>
+        <link rel="stylesheet" href="a_style.css">
+        <script src="https://kit.fontawesome.com/0119a0d3c2.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="navbar">
+                <img src="logo1.png" class="logo" alt="GameZone Logo">
+                <nav>
+                    <ul id="menuList">
+                        <li><a href="HomePage.php">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="Event.php">Event</a></li>
+                        <li><a href="sports.html">Sport</a></li>
+                        <li><a href="New Register Form.html">Membership</a></li>
+                        <li><a href="ruls.html">Rules</a></li>
+                        <li><a href="contactUs.html">Contact</a></li>
+                        <li><a href="login.html" class="login">Login</a></li>
+                    </ul>
+                </nav>
+                <i class="fa-solid fa-bars menu-icon" onclick="togglemenu()"></i>
+            </div>
+
+            <div class="about-us">
+                <div class="contain">
+                    <div class="row">
+                        <div class="flex">
+                            <h2>About Us</h2>
+                            <h3>Discover Our Story</h3><br>
+                            <p>Welcome to GameZone, where passion for sports meets community spirit! 
+                                Established with a mission to promote health, fitness, and camaraderie, 
+                                our club provides an inclusive environment where members of all ages and 
+                                skill levels can participate in a wide variety of sports. We pride ourselves 
+                                on our state-of-the-art facilities, dedicated coaches, and a vibrant community 
+                                that fosters both competitive spirit and personal growth. Whether you're here to 
+                                sharpen your skills, make new friends, or simply stay active, GameZone is the place for you. Join 
+                                us and be a part of a club that believes in excellence, teamwork, and fun!
+                            </p>
+                        </div>
+                        <div class="flex">
+                            <img src="about.jpg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="intro">
+                <br>
+                <h2>Our Story!</h2><br>
+                <p>Founded in 1999, GameZone began as a small group of sports enthusiasts who shared a vision for creating 
+                    a space where passion for sports could thrive. Over the years, we’ve grown into a dynamic community that embraces 
+                    athletes of all ages and skill levels. From humble beginnings with just a few basic facilities, we’ve expanded into a 
+                    full-fledged sports complex offering state-of-the-art equipment, expert coaching, and a vibrant atmosphere for both competitive
+                     and recreational sports.
+
+                    Our journey has been defined by a commitment to excellence, teamwork, and inclusivity. We believe in fostering an environment 
+                    where everyone, from beginners to seasoned athletes, can achieve their best and enjoy the camaraderie that comes from being part
+                     of a thriving sports community. With a rich history of hosting successful tournaments, events, and training programs, we continue 
+                     to inspire and nurture talent, helping athletes of all backgrounds reach their full potential.
+                    
+                    Join us as we build on our legacy and continue to create unforgettable sporting moments!
+                </p><br><br>
+            </div>
+
+            <div class="our-story">
+                
+                <div class="club-content">
+                    <div class="club-card">
+                        <div class="club-img">
+                            <img src="hall.jpg">
+                        </div>
+                        
+                    </div>
+
+                    <div class="club-card">
+                        <div class="club-img">
+                            <img src="gym.jpg">
+                        </div>
+                        
+                    </div>
+
+                    <div class="club-card">
+                        <div class="club-img">
+                            <img src="room.jpg">
+                        </div>
+                        
+                    </div>
+
+                    <div class="club-card">
+                        <div class="club-img">
+                            <img src="win.jpg">
+                        </div>
+                        
+                    </div>
+
+                    <div class="club-card">
+                        <div class="club-img">
+                            <img src="pooltable.jpg">
+                        </div>
+                        
+                    </div>
+
+                    <div class="club-card">
+                        <div class="club-img">
+                            <img src="foot.jpg">
+                        </div>
+                        
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+    
+        <script>
+            var menuList = document.getElementById("menuList");
+            menuList.style.maxHeight = "0px";
+
+            function togglemenu(){
+                if(menuList.style.maxHeight == "0px"){
+                     menuList.style.maxHeight = "240px";
+                }
+                else{
+                     menuList.style.maxHeight = "0px";
+                }
+            }
+        </script>
+
+        <div class="footer">
+            <div class="col-1">
+                    <h3><b>QUICK LINKS</b></h3>
+                    <a href="#">About Us</a>
+                    <a href="#">Event</a>
+                    <a href="#">Sport</a>
+                    <a href="#">Contact</a>
+                    <a href="#">Login</a>
+            </div>
+                <div class="col-2">
+                    <h3><b>NEWSLETTER</b></h3>
+                    <form>
+                        <input type="email" placeholder="Your Email Address" required>
+                        <br>
+                        <button type="submit">SUBSCRIBE NOW</button>
+                    </form>
+                </div>
+                <div class="col-3">
+                    <h3><b>CONTACT US</b></h3>
+                    <P>24/A, Udhaya Road, Lane 1<br>New Shade, Colombo 03</P>
+                    <div class="social-icons">
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-linkedin"></i>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

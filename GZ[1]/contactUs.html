@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+/* Container */
+.container {
+    width: 100%;
+    min-height: 100vh; /* Ensures full height */
+    padding-left: 8%;
+    padding-right: 8%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* Navbar */
+.navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 20px 0; /* Add padding to navbar for spacing */
+}
+
+.logo {
+    width: 100px;
+    cursor: pointer;
+}
+
+.menu-icon {
+    width: 25px;
+    cursor: pointer;
+    display: none !important; 
+}
+
+nav {
+    flex: 1;
+    text-align: right;
+}
+
+nav ul {
+    padding: 0; /* Remove padding */
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+    padding: 10px;
+}
+
+nav ul li a:hover {
+    color: #ff5ea2;
+}
+
+.login {
+    padding: 10px 20px;
+    background-color: #ff54a2;
+    color: #fff;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.login:hover {
+    background-color: #108aba;
+    color: #000;
+} 
+
+        .icon-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 45px;
+        }
+
+        .icon-wrapper1, .icon-wrapper2, .icon-wrapper3 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 20px;
+        }
+
+        .icon {
+            width: 40px;
+            height: 40px;
+            background-color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .icon-text {
+            text-align: center;
+            margin-top: 8px;
+            font-size: 14px;
+            color: white;
+        }
+
+        .location-icon {
+            border-radius: 60% 60% 60% 0;
+            transform: rotate(-45deg);
+        }
+
+        .location-icon::before {
+            content: '';
+            width: 20px;
+            height: 20px;
+            background-color: black;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .telephone-icon::before, .email-icon::before {
+            font-family: Arial, sans-serif;
+            font-size: 24px;
+            color: black;
+        }
+
+        .telephone-icon::before {
+            content: '☎';
+        }
+
+        .email-icon::before {
+            content: '✉';
+        }
+        .feedback{
+            max-width: 750px;
+            margin: 50px auto;
+            padding: 30px;
+            border: 1% solid #043c5c;
+            border-radius: 1%;
+            box-shadow: 8px 10px 10px ;
+            background-color:rgb(9, 89, 129);
+            border-color: #000;
+
+
+        }
+        .footer {
+    margin-top: 50px; /* Reduced margin to minimize space */
+    width: 100%;
+    padding: 50px 15%;
+    background: linear-gradient(#57bef6, #108aba);
+    color: #efefef;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    justify-content: space-between;
+}
+
+.footer div {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.col-2 {
+    flex-grow: 2;
+}
+
+.footer div h3 {
+    font-weight: 300;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.col-1 a {
+    display: block;
+    text-decoration: none;
+    color: #efefef;
+    margin-bottom: 10px;
+}
+
+.col-1, .col-3 {
+    margin: 0 auto;
+}
+
+form input {
+    width: 400px;
+    height: 45px;
+    border-radius: 4px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    outline: none;
+    border: none;   
+}
+
+form button {
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    border-radius: 30px;
+    padding: 10px 30px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.social-icons {
+    margin-top: 30px;
+}
+
+.social-icons i {
+    font-size: 22px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+p {
+    color: #efefef;
+}
+    </style>
+    <script>
+        function contact(){
+            var email= document.getElementById('email').value;
+            var fdback= document.getElementById('feedback').value;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <img src="logo.jpg" class="logo" alt="GameZone Logo">
+            <nav>
+                <ul id="menuList">
+                    <li><a href="HomePage.php">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="Event.php">Event</a></li>
+                        <li><a href="sports.html">Sport</a></li>
+                        <li><a href="New Register Form.html">Membership</a></li>
+                        <li><a href="ruls.html">Rules</a></li>
+                        <li><a href="contactUs.html">Contact</a></li>
+                        <li><a href="login.html" class="login">Login</a></li>
+                </ul>
+            </nav>
+            <i class="fa-solid fa-bars menu-icon" onclick="togglemenu()"></i>
+        </div>
+   
+
+    <main style="background-color: rgb(6, 94, 129);">
+        <h1 style="color: white; font-family: fantasy; text-align: center;">GET IN TOUCH <br><br></h1>
+        <div class="icon-container">
+            <div class="icon-wrapper1">
+                <div class="icon location-icon"></div>
+                <div class="icon-text">Find our club here <br> <br>No:23/2, <br> Jecob Road, <br> Malwidiya,<br> Nugegoda.</div>
+            </div>
+            <div class="icon-wrapper2">
+                <div class="icon telephone-icon"></div>
+                <div class="icon-text">Call us <br><br> President of the club<br>+123 456 7890 <br> Vice President <br> +947 456 7898<br></div>
+            </div>
+            <div class="icon-wrapper3">
+                <div class="icon email-icon"></div>
+                <div class="icon-text">Email us <br> <br> gamezone@gmail.com <br>membercare@gamezonen.lk<br>president@gamezone.lk<br>sportson@gamezone.lk</div>
+            </div>
+        </div>
+        <br>
+        <br>
+    </main>
+
+        <form method="POST" action="get.php">
+            <div class="feedback">
+            <input type="email" name="email" id="email" placeholder="Your Email Address" required>
+            <br>
+            <input type="text" name="fdback" id="fdback" placeholder="Your feedback/questions" required>
+            <br>
+            <button type="submit">SUBMIT</button>
+        </div>
+        </form>
+    
+        <div class="footer">
+            <div class="col-1">
+                <h3>QUICK LINKS</h3>
+                <a href="#">About Us</a>
+                <a href="#">Event</a>
+                <a href="#">Sport</a>
+                <a href="#">Contact</a>
+                <a href="#">Login</a>
+            </div>
+            <div class="col-2">
+                <h3>NEWSLETTER</h3>
+                <form>
+                    <input type="email" placeholder="Your Email Address" required>
+                    <br>
+                    <button type="submit">SUBSCRIBE NOW</button>
+                </form>
+            </div>
+            <div class="col-3">
+                <h3>CONTACT US</h3>
+                <P>24/A, Udhaya Road, Lane 1<br>New Shade, Colombo 03</P>
+                <div class="social-icons">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-linkedin"></i>
+                </div>
+            </div>
+        </div>
+            </body>
+        </html>
