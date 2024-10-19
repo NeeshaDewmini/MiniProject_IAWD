@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home Page of GameZone</title>
+        <link rel="stylesheet" href="s_style.css">
+        <script src="https://kit.fontawesome.com/0119a0d3c2.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="navbar">
+                <img src="logo1.png" class="logo" alt="GameZone Logo">
+                <nav>
+                    <ul id="menuList">
+                        <li><a href="HomePage.php">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="Event.php">Event</a></li>
+                        <li><a href="sports.html">Sport</a></li>
+                        <li><a href="New Register Form.html">Membership</a></li>
+                        <li><a href="ruls.html">Rules</a></li>
+                        <li><a href="contactUs.html">Contact</a></li>
+                        <li><a href="login.html" class="login">Login</a></li>
+                    </ul>
+                </nav>
+                <i class="fa-solid fa-bars menu-icon" onclick="togglemenu()"></i>
+            </div>
+
+            <div class="our-sport">
+                
+                <div class="sport-content">
+                    <div class="sport-card">
+                        <div class="sport-img">
+                            <img src="cricket.jpg">
+                        </div>
+                        <div class="sport-dec">
+                            <h2>Cricket</h2><br>
+                            <a href="cricket.html" class="login">Learn More</a>
+                        </div>
+                    </div>
+
+                    <div class="sport-card">
+                        <div class="sport-img">
+                            <img src="volleyball.jpg">
+                        </div>
+                        <div class="sport-dec">
+                            <h2>Volleyball</h2><br>
+                            <a href="sports.html" class="login">Learn More</a>
+                        </div>
+                    </div>
+
+                    <div class="sport-card">
+                        <div class="sport-img">
+                            <img src="foot.jpg">
+                        </div>
+                        <div class="sport-dec">
+                            <h2>Football</h2><br>
+                            <a href="foot.html" class="login">Learn More</a>
+                        </div>
+                    </div>
+
+                    <div class="sport-card">
+                        <div class="sport-img">
+                            <img src="swimming.jpg">
+                        </div>
+                        <div class="sport-dec">
+                            <h2>Swimming</h2><br>
+                            <a href="swimming.html" class="login">Learn More</a>
+                        </div>
+                    </div>
+
+                    <div class="sport-card">
+                        <div class="sport-img">
+                            <img src="badmin.jpg">
+                        </div>
+                        <div class="sport-dec">
+                            <h2>Badminton</h2><br>
+                            <a href="badminton.html" class="login">Learn More</a>
+                        </div>
+                    </div>
+
+                    <div class="sport-card">
+                        <div class="sport-img">
+                            <img src="chess.jpg">
+                        </div>
+                        <div class="sport-dec">
+                            <h2>Chess</h2><br>
+                            <a href="chess.html" class="login">Learn More</a>
+                        </div>
+                    </div>
+
+        </div>
+        <script>
+            var menuList = document.getElementById("menuList");
+            menuList.style.maxHeight = "0px";
+
+            function togglemenu(){
+                if(menuList.style.maxHeight == "0px"){
+                     menuList.style.maxHeight = "240px";
+                }
+                else{
+                     menuList.style.maxHeight = "0px";
+                }
+            }
+        </script>
+
+<div class="footer">
+    <div class="col-1">
+        <h3><b>QUICK LINKS</b></h3>
+        <a href="#">About Us</a>
+        <a href="#">Event</a>
+        <a href="#">Sport</a>
+        <a href="#">Contact</a>
+        <a href="#">Login</a>
+    </div>
+    <div class="col-2">
+        <h3><b>NEWSLETTER</b></h3>
+        <form>
+            <input type="email" placeholder="Your Email Address" required>
+            <br>
+            <button type="submit">SUBSCRIBE NOW</button>
+        </form>
+    </div>
+    <div class="col-3">
+        <h3><b>CONTACT US</b></h3>
+        <P>24/A, Udhaya Road, Lane 1<br>New Shade, Colombo 03</P>
+        <div class="social-icons">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-linkedin"></i>
+        </div>
+    </div>
+</div>
+    </body>
+</html>

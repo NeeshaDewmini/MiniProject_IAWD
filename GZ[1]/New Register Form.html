@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Membership Registration Form</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+/* Container */
+.container1 {
+    width: 100%;
+  
+    padding-left: 8%;
+    padding-right: 8%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* Navbar */
+.navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 20px 0; /* Add padding to navbar for spacing */
+}
+
+.logo {
+    width: 100px;
+    cursor: pointer;
+}
+
+.menu-icon {
+    width: 25px;
+    cursor: pointer;
+    display: none !important; 
+}
+
+nav {
+    flex: 1;
+    text-align: right;
+}
+
+nav ul {
+    padding: 0; /* Remove padding */
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+    padding: 10px;
+}
+
+nav ul li a:hover {
+    color: #ff5ea2;
+}
+
+.login {
+    padding: 10px 20px;
+    background-color: #ff54a2;
+    color: #fff;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.login:hover {
+    background-color: #108aba;
+    color: #000;
+} 
+
+
+.body {
+            font-family: Arial, sans-serif;
+            background-color: rgb(44, 44, 134);
+            margin: 0;
+            padding: 0;
+        }
+        .container2 {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            background-color: white;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input[type="text"],
+        .form-group input[type="date"] {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        .form-group input[type="radio"],
+        .form-group input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        .sports-section {
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 8px;
+        }
+        .sports-section h2 {
+            margin-top: 0;
+        }
+        #msg {
+            color: red;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .footer {
+    margin-top: 50px; /* Reduced margin to minimize space */
+    width: 100%;
+    padding: 50px 15%;
+    background: linear-gradient(#57bef6, #108aba);
+    color: #efefef;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    justify-content: space-between;
+}
+
+.footer div {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.col-2 {
+    flex-grow: 2;
+}
+
+.footer div h3 {
+    font-weight: 300;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.col-1 a {
+    display: block;
+    text-decoration: none;
+    color: #efefef;
+    margin-bottom: 10px;
+}
+
+.col-1, .col-3 {
+    margin: 0 auto;
+}
+.footer {
+    margin-top: 50px; /* Reduced margin to minimize space */
+    width: 100%;
+    padding: 50px 15%;
+    background: linear-gradient(#57bef6, #108aba);
+    color: #efefef;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    justify-content: space-between;
+}
+
+.footer div {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.col-2 {
+    flex-grow: 2;
+}
+
+.footer div h3 {
+    font-weight: 300;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.col-1 a {
+    display: block;
+    text-decoration: none;
+    color: #efefef;
+    margin-bottom: 10px;
+}
+
+.col-1, .col-3 {
+    margin: 0 auto;
+}
+
+.form2 input {
+    width: 400px;
+    height: 45px;
+    border-radius: 4px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    outline: none;
+    border: none;   
+}
+
+.form2 button {
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    border-radius: 30px;
+    padding: 10px 30px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.social-icons {
+    margin-top: 30px;
+}
+
+.social-icons i {
+    font-size: 22px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+p {
+    color: #efefef;
+}
+
+.social-icons {
+    margin-top: 30px;
+}
+
+.social-icons i {
+    font-size: 22px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+p {
+    color: #efefef;
+}
+    </style>
+    <script>
+    function register() {
+    var fn = document.getElementById('fn').value;
+    var birthday = document.getElementById('birthday').value;
+    var msg = document.getElementById('msg');
+    var sportsCheckboxes = document.querySelectorAll('input[name="sports"]:checked');
+    var nic = document.getElementById('nic').value;
+    var contact = document.getElementById('contact').value;
+    var whatsapp = document.getElementById('whatsapp').value;
+
+    
+    // Clear any previous messages
+    msg.innerHTML = '';
+
+    if (fn === "") {
+        alert ("Please enter your full name.");
+        return false;
+    }
+    
+    if (birthday === "") {
+        alert ("Please enter your birthday.");
+        return false;
+    }
+    if (nic.length !== 10) {
+    alert("NIC Number Is Incorrect.");
+    return false;
+    }
+    if (contact.length !== 10) {
+    alert("Your Contact Number is'nt valide");
+    return false;
+    }
+    if (whatsapp.length !== 10) {
+    alert("our Whatsapp Number is'nt valide");
+    return false;
+    }
+
+    if (sportsCheckboxes.length === 0) {
+        alert ("Please select at least one sport.");
+        return false;
+    }
+    
+    // If all checks pass
+    msg.innerHTML = "Registration complete!";
+    return true;
+
+   
+
+}
+
+    </script>
+</head>
+<body>
+    
+    <div class="container1">
+        <div class="navbar">
+            <img src="logo.jpeg" class="logo" alt="GameZone Logo">
+            <nav>
+                <ul id="menuList">
+                    <li><a href="HomePage.php">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="Event.php">Event</a></li>
+                        <li><a href="sports.html">Sport</a></li>
+                        <li><a href="New Register Form.html">Membership</a></li>
+                        <li><a href="ruls.html">Rules</a></li>
+                        <li><a href="contactUs.html">Contact</a></li>
+                        <li><a href="login.html" class="login">Login</a></li>
+                </ul>
+            </nav>
+            <i class="fa-solid fa-bars menu-icon" onclick="togglemenu()"></i>
+        </div>
+    <div class="container2">
+        <div id="msg"></div>
+        <form method="post" action="Get.php">
+
+            <h1 style="text-align: center;">Membership Registration Form</h1>
+
+            <div class="form-group">
+                <label for="fn">Full Name:</label>
+                <input name="fn" type="text" id="fn" >
+            </div>
+
+            <div class="form-group">
+                <label for="birthday">Birthdate:</label>
+                <input name="birthday" type="date" id="birthday" >
+            </div>
+
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input name="age" type="text" id="age" >
+            </div>
+
+            <div class="form-group">
+                <label for="nic">NIC Number:</label>
+                <input name="nic" type="text" id="nic" >
+            </div>
+
+            <div class="form-group">
+                <label for="contact">Contact No:</label>
+                <input name="contact" type="text" id="contact" >
+            </div>
+
+            <div class="form-group">
+                <label for="whatsapp">Whatsapp No:</label>
+                <input name="whatsapp" type="text" id="whatsapp" >
+            </div>
+
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <input name="address" type="text" id="address" >
+            </div>
+
+            <div class="form-group">
+                <label>Gender:</label>
+                <label>
+                    <input name="gender" type="radio" value="male" >
+                    Male
+                </label>
+                <label>
+                    <input name="gender" type="radio" value="female">
+                    Female
+                </label>
+            </div>
+
+            <div class="form-group sports-section">
+                <h2>Sports</h2>
+                <p>Select what you like to play:</p>
+                <label>
+                    <input type="checkbox" name="sports" value="cricket">
+                    Cricket
+                </label><br>
+    
+                <label>
+                    <input type="checkbox" name="sports" value="football">
+                    Football
+                </label><br>
+    
+                <label>
+                    <input type="checkbox" name="sports" value="volleyball">
+                    Volleyball
+                </label><br>
+
+                <label>
+                    <input type="checkbox" name="sports" value="badminton">
+                    Badminton
+                </label><br>
+
+                <label>
+                    <input type="checkbox" name="sports" value="chess">
+                    Chess
+                </label><br>
+
+                <label>
+                    <input type="checkbox" name="sports" value="swimming">
+                    Swimming
+                </label><br>
+                
+                <label>
+                    <input type="checkbox" name="sports" value="pooltable">
+                    Pool Table
+                </label>
+            </div>
+
+            
+                <button type="submit"><p style="color: #000; border-color: #000; box-shadow: inset;"> Submit </p>  </button>
+           
+        </form>
+       </div></div>
+
+       <div class="footer">
+        <div class="col-1">
+            <h3>QUICK LINKS</h3>
+            <a href="#">About Us</a>
+            <a href="#">Event</a>
+            <a href="#">Sport</a>
+            <a href="#">Contact</a>
+            <a href="#">Login</a>
+        </div>
+        <div class="col-2">
+            <h3>NEWSLETTER</h3>
+            <div class="form2">
+            <form>
+              
+                <input type="email" placeholder="Your Email Address" required>
+                <br>
+                
+                <button type="submit">SUBSCRIBE NOW</button>
+            </form></div>
+        </div>
+        <div class="col-3">
+            <h3>CONTACT US</h3>
+            <P>24/A, Udhaya Road, Lane 1<br>New Shade, Colombo 03</P>
+            <div class="social-icons">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-linkedin"></i>
+            </div>
+        </div>
+    </div>
+        </body>
+    </html>
